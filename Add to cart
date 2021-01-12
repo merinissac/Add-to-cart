@@ -1,0 +1,53 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class cart {
+	
+	WebDriver driver;
+	
+	public void launchBrowser()
+	{
+		System.setProperty("webdriver.chrome.driver","C:\\Selenium\\chromedriver_win32\\chromedriver.exe");
+		driver=new ChromeDriver();
+		driver.get("https://storefront.orderstack.io/c68s89/thalassery/#/");
+		
+	}
+	
+	public void Cart() throws Exception {
+	
+	
+	{
+	   driver.findElement(By.id("section5f9a3c9b107c4d239c19b036")).click();
+	   //driver.findElement(By.xpath("5f9a3fbc107c4d239c19b058")).click();
+	   
+	   Thread.sleep(2000);
+	   driver.findElement(By.xpath("/html/body/app-root/app-landingpage/div/div[3]/app-cataloglist/div[1]/div[1]/mat-card/mat-card-actions/button")).click();
+	   
+	   //driver.findElement(By.className("mat-button")).click();
+	   
+	   Thread.sleep(2000);
+       driver.findElement(By.xpath("/html/body/div[2]/div[2]/div/mat-dialog-container/app-addtocartdialogue/div[2]/div[2]/button")).click();
+       
+       
+        Thread.sleep(10000);
+        
+	}
+	}
+
+
+	public static void main(String[] args) throws Exception {
+		cart obj = new cart();
+		obj.launchBrowser();
+		obj.Cart();
+	}}
+
+		// TODO Auto-generated method stub
+
+	
+
+
+
+
+
